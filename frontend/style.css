@@ -28,7 +28,7 @@ header .logo img{
 
 header .logo h1{
     font-size: 28px;
-    color: #0a98fe;
+    color: #5389DAF2;
 }
 
 .links{
@@ -66,13 +66,6 @@ header .logo h1{
 .links li a:hover::after{
     width: 100%;
 }
-
-
-
-
-
-
-
 
 
 .main{
@@ -113,7 +106,7 @@ header .logo h1{
     right: -8px;
     top: 50%;
     height: 70%;
-    background: rgba(0, 0, 255, 0.364);
+    background: #5389DA87;
     transform: translateY(-50%) rotate(-3deg);
     z-index: 1;
 }
@@ -179,17 +172,131 @@ header .logo h1{
 .btn{
     text-align:center;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
 }
 
 .btn a{
-    display:inline-block;
+    width: 259px;
+    height: 70px;
     padding: 18px 55px;
-    border: 2px solid #0d84d9;
+    border: 1px solid #0d84d9;
     border-radius:25px;
     text-decoration:none;
     font-size: 32px;
     font-weight: 600;
-    color:#1c89d6;
-    background-color: #d5caca69;
+    color:#5389DAF2;
+    background-color: #F5F2F2;
+}
+
+
+
+.about{
+    text-align: center;
+    padding: 80px 0;
+}
+
+.about h1{
+    font-size: 50px;
+    width: 400;
+    display: inline-block;
+    font-family: 'DM Serif Display', serif;
+}
+
+.title{
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.title::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background-color: #5389DA;
+}
+
+.about p{
+    text-align: left;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.parg-about{
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+
+.roles {
+    padding: 0px 100px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 80px;
+}
+
+.line {
+    position: relative;
+    margin-left: 220px;
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 0;
+    width: 4px;
+    height: 80%;
+    background: #5389DAF2;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.point {
+    width: 24px;
+    height: 24px;
+    background: #5389DAF2;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.roles h3 {
+    font-family: "Raleway", sans-serif;
+    width: 100px;
+    font-size: 20px;
+}
+
+.content p {
+    color: #292727;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+.works p{
+    text-align: left;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 70px;
 }
