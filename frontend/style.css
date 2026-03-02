@@ -9,7 +9,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 60px;
+    padding: 10px 20px;
     margin: 30px 40px;
     border-radius: 25px;
     border: 1px solid #3373bd;
@@ -212,6 +212,7 @@ header .logo h1{
     text-align: center;
 }
 
+
 h2 {
     font-size: 48px;
     margin-bottom: 40px;
@@ -234,6 +235,8 @@ h2::after {
 }
 
 .about-text {
+    text-align: left;
+    direction: ltr;
     font-size: 22px;
     line-height: 1.7;
     color: #333;
@@ -289,8 +292,10 @@ h2::after {
 }
 
 .how-text {
+    text-align: left;
+    direction: ltr;
     font-size: 22px;
-    line-height: 1.7;
+    line-height: 1.5;
     max-width: 880px;
     margin: 0 auto 100px;
     color: #333;
