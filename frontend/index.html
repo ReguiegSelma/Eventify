@@ -139,83 +139,88 @@
                 <div class="step">3</div>
             </div>
 
+
+
+            <!-- FORM 1 : Info personnelle -->
             <form class="register-form" id="form1">
                 <div class="form-row">
                     <div class="form-group">
-                        <label>First Name :</label>
-                        <input type="text" required>
+                        <label>First Name : *</label>
+                        <input type="text" id="firstName" name="firstName" required maxlength="15">
                     </div>
                     <div class="form-group">
-                        <label>Last Name :</label>
-                        <input type="text" required>
+                        <label>Last Name : *</label>
+                        <input type="text" id="lastName" name="lastName" required maxlength="15">
                     </div>
                 </div>
-
                 <div class="form-group">
-                    <label>Email :</label>
-                    <input type="email" required>
+                    <label>Email : *</label>
+                    <input type="email" id="emailInput" name="email" required maxlength="200" autocomplete="email">
                 </div>
-
                 <div class="form-group">
-                    <label>Phone number :</label>
-                    <input type="tel" required>
+                    <label>Phone number : *</label>
+                    <input type="tel" id="phone" name="phone" required minlength="10" maxlength="12" pattern="[0-9+\-() ]{7,32}">
                 </div>
-
                 <div class="form-group">
-                    <label>Discord username :</label>
-                    <input type="text" required>
+                    <label>Discord username : *</label>
+                    <input type="text" id="discordUsername" name="discordUsername" required maxlength="50">
                 </div>
-
                 <div class="form-group">
                     <label>University :</label>
-                    <input type="text">
+                    <input type="text" id="university" name="university" maxlength="100">
                 </div>
-
                 <div class="form-group">
-                    <label>Field of Study / Current Position :</label>
-                    <input type="text">
+                    <label>Field of Study / Current Position : *</label>
+                    <input type="text" id="fieldOfStudy" name="fieldOfStudy" maxlength="100" required>
                 </div>
-
-                <div class="form-group ">
+                <div class="form-group">
                     <label>Role selection :</label>
-                    <select required id="roleSelect">
-                        <option value="">Select your role</option>
+                    <select required id="roleSelect" name="role">
                         <option value="participant">Participant</option>
-                        <option value="staff">Staff</option>
-                        <option value="mentor">Mentor</option>
                     </select>
                 </div>
-
-                <button type="button" class="btn-register" id="nextBtn">Next</button>            
+                <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+                    <button type="button" class="btn-register" id="next1">Next →</button>
+                </div>
             </form>
+
+            <!-- FORM 2 : Participant -->
             <form class="register-form" id="form2" style="display: none; margin-top: 40px;">
                 <div class="form-group">
-                    <label>Do you already have a team ? *(if yes , add your team name):</label>
-                    <input type="text" required>
+                    <label>Do you already have a team? *:</label>
+                    <input type="checkbox" id="haveteam" name="haveteam">
+                      <label class="radio-option">
+                            <input type="radio" name="team" value="yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="team" value="no">
+                            <span>No</span>
+                        </label>
                 </div>
-
+                <div class="form-group">
+                    <label>if yes, add your team name :</label>
+                    <input type="text" id="teamName" name="teamName" maxlength="80">
+                </div>
                 <div class="form-group">
                     <label>Programming languages or tools you use :</label>
-                    <input type="text" required>
+                    <input type="text" id="tools" name="tools" required maxlength="200">
                 </div>
-
                 <div class="form-group">
                     <label>Why do you want to participate? :</label>
-                    <input type="text" required>
+                    <input type="text" id="motivation" name="motivation" required maxlength="300">
                 </div>
-
                 <div class="form-group">
                     <label>What do you expect from this event? :</label>
-                    <input type="text">
+                    <input type="text" id="expectations" name="expectations" maxlength="300">
                 </div>
-
                 <div class="form-group">
                     <label>Your main skills :</label>
-                    <input type="text">
+                    <input type="text" id="mainSkills" name="mainSkills" maxlength="200">
                 </div>
                 <div class="form-group">
-                    <label>Skill Level (Beginner / Intermediate / Advanced)</label>
-                    <select required id="skillLevelSelect">
+                    <label>Skill Level :</label>
+                    <select required id="skillLevelSelect" name="skillLevel">
                         <option value="">Select your skill level</option>
                         <option value="beginner">Beginner</option>
                         <option value="intermediate">Intermediate</option>
@@ -223,101 +228,86 @@
                     </select>
                 </div>
                 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-                    <button type="button" class="btn-register" id="backParticipant">
-                    Back
-                   </button>
-                   <button type="button" class="btn-register" id="nextParticipant">
-                   Next
-                   </button>
+                    <button type="button" class="btn-register" id="back2">← Back</button>
+                    <button type="button" class="btn-register" id="next2">Next →</button>
                 </div>
             </form>
+
+            <!-- FORM 3 : Mentor -->
             <form class="register-form" id="form3" style="display: none; margin-top: 40px;">
                 <div class="form-group">
                     <label>Years of Experience :</label>
-                    <input type="text" required>
+                    <input type="text" id="yearsExperience" name="yearsExperience" required maxlength="40" autocomplete="off">
                 </div>
-
-                <div class="form-group">
-                    <label>LinkedIn Profile :</label>
-                    <input type="text" required>
-                </div>
-
                 <div class="form-group">
                     <label>Portfolio :</label>
-                    <input type="text" required>
+                    <input type="url" id="portfolio" name="portfolio" maxlength="200" placeholder="https://..." autocomplete="url">
                 </div>
-
                 <div class="form-group">
                     <label>Area of Expertise :</label>
-                    <input type="text">
+                    <input type="text" id="expertiseArea" name="expertiseArea" maxlength="120" autocomplete="off">
                 </div>
-
                 <div class="form-group">
                     <label>Technologies / Tools mastered :</label>
-                    <input type="text">
+                    <input type="text" id="masteredTools" name="masteredTools" maxlength="200" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label>Have you mentored before?</label>
                     <div class="radio-group">
                         <label class="radio-option">
-                        <input type="radio" name="mentored" value="yes" required>
-                        <span>Yes</span>
+                            <input type="radio" name="mentored" value="yes" required>
+                            <span>Yes</span>
                         </label>
                         <label class="radio-option">
-                        <input type="radio" name="mentored" value="no">
-                        <span>No</span>
+                            <input type="radio" name="mentored" value="no">
+                            <span>No</span>
                         </label>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Availability during the event</label>
-                    <input type="text" required>
+                    <label>Availability during the event :</label>
+                    <input type="text" id="availabilityMentor" name="availability" required maxlength="120" autocomplete="off">
                 </div>
                 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-                     <button type="button" class="btn-register" id="backMentor">
-                    Back
-                   </button>
-                   <button type="button" class="btn-register" id="nextMentor">
-                   Next
-                   </button>
+                    <button type="button" class="btn-register" id="back3">← Back</button>
+                    <button type="button" class="btn-register" id="next3">Next →</button>
                 </div>
             </form>
+
+            <!-- FORM 4 : Staff -->
             <form class="register-form" id="form4" style="display: none; margin-top: 40px;">
                 <div class="form-group">
                     <label>Preferred Role :</label>
-                    <input type="text" required>
+                    <input type="text" id="preferredRole" name="preferredRole" required maxlength="120" autocomplete="off">
                 </div>
-
                 <div class="form-group">
-                    <label>Have you helped organize events before? (yes/no):</label>
-                    <input type="text" required>
+                    <label>Have you helped organize events before? (yes/no) :</label>
+                    <select id="organizedBefore" name="organizedBefore" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
                 </div>
-
                 <div class="form-group">
-                    <label>Availability during the event:</label>
-                    <input type="text" required>
+                    <label>Availability during the event :</label>
+                    <input type="text" id="availabilityStaff" name="availability" required maxlength="120" autocomplete="off">
                 </div>
-               <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-                     <button type="button" class="btn-register" id="backStaff">
-                    Back
-                   </button>
-                   <button type="button" class="btn-register" id="nextStaff">
-                   Next
-                   </button>
+                <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                    <button type="button" class="btn-register" id="back4">← Back</button>
+                    <button type="button" class="btn-register" id="next4">Next →</button>
                 </div>
             </form>
-            <form class="register-form" id="final">
+
+            <!-- FORM FINAL : Confirmation -->
+            <div class="register-form" id="final" style="display: none; margin-top: 40px; text-align: center;">
                 <h4>Registration complete!</h4>
                 <p>Thanks for joining Eventify. Keep an eye on your inbox for updates.</p>
-               <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-                     <button type="button" class="btn-register" id="backFinal">
-                    Back
-                   </button>
-                   <button type="button" class="btn-register" id="submitFinal">
-                   Submit
-                   </button>
+                <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+                    <button type="button" class="btn-register" id="backFinal">← Back</button>
+                    <button type="button" class="btn-register" id="submitFinal">Submit ✓</button>
                 </div>
-            </form>
+            </div>
+
         </div>
     </section>
 
@@ -340,6 +330,5 @@
         </div>
         </div>
     </footer>
-    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
-</body>
+    <script src="script.js"></script></body>
 </html>

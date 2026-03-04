@@ -156,7 +156,7 @@ header .logo h1{
     margin-bottom: 20px;
 }
 
-.box h2 {
+.box h3 {
     margin: 0;
     font-size: 24px;
     font-weight: 700;
@@ -329,7 +329,8 @@ h2::after {
     transform: translateX(8px);
 }
 
-/* ─── Formulaire ───────────────────────────────────── */
+
+
 
 .register {
     text-align: center;
@@ -344,7 +345,7 @@ h2::after {
     margin-bottom: 50px;
 }
 
-/* Card du formulaire */
+
 .register-form {
     background: #f2f2f2;
     padding: 60px 70px;
@@ -434,7 +435,7 @@ input:focus, select:focus {
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
-    float: right;
+    
     margin-top: 20px;
 }
 
@@ -550,7 +551,7 @@ footer {
     align-items: center;
 }
 
-/* Left */
+
 
 .footer-left {
     display: flex;
@@ -569,8 +570,6 @@ footer {
     color: #3373bd;
 }
 
-/* Center */
-
 .footer-center a {
     text-decoration: none;
     color: #666;
@@ -581,8 +580,6 @@ footer {
 .footer-center a:hover {
     color: #3373bd;
 }
-
-/* Right */
 
 .footer-right {
     display: flex;
