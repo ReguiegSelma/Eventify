@@ -2,27 +2,12 @@
 <html lang="en">
 
 <head>
-
-    <!-- META -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Event Management</title>
-
-
-    <!-- CSS -->
-
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/eventManger.css">
-
-
-    <!-- GOOGLE FONT -->
-
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
-    <!-- ICONS -->
-
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -31,34 +16,17 @@
 
 
 <body>
-
-
-
-    <!-- MOBILE MENU BUTTON -->
-
     <button class="menu-btn" id="menuBtn">
 
         <i class="fa-solid fa-bars"></i>
 
     </button>
-
-
-
-    <!-- SIDEBAR -->
-
     <header id="sidebar">
-
         <div class="logo">
-
             <img src="../images/OMC.png" alt="logo">
-
             <h1>Eventify</h1>
-
         </div>
-
-
         <ul class="links-ul">
-
             <li>
                 <a class="active">Event management</a>
             </li>
@@ -74,40 +42,26 @@
             <li>
                 <a href="logout.html">Logout</a>
             </li>
-
         </ul>
-
     </header>
-
-
-
-    <!-- DASHBOARD -->
-
     <main class="dashboard">
-
-
+        <button class="create-btn" id="createBtn">
+            + Create event
+        </button>
         <div class="event-container">
-            <button class="create-btn" id="createBtn">
-                + Create event
-            </button>
-            <div class="event-overview">
-
-                <h2>Event Overview</h2>
-
-                <p>
-                    <strong>Event Name:</strong> Ideathon
-                </p>
-
-                <p>
-                    <strong>Description:</strong> ************
-                </p>
-
-                <p>
-                    <strong>Date & time:</strong> 06/03/2026 , 17h
-                </p>
-
-                <p>
-                    <strong>Number of days:</strong> 3 days
+         <div class="event-overview">
+            <h2>Event Overview</h2>
+            <p>
+                <strong>Event Name:</strong> Ideathon
+            </p>
+            <p>
+                 <strong>Description:</strong> ************
+            </p>
+            <p>
+            <strong>Date & time:</strong> 06/03/2026 , 17h
+            </p>
+            <p>
+                <strong>Number of days:</strong> 3 days
                 </p>
                 <div class="event-buttons">
                     <button class="btn edit-btn">
@@ -122,6 +76,8 @@
                 <h3>Create event</h3>
                 <label>Event name</label>
                 <input type="text"id="eventName"placeholder="Enter event name">
+                <label >Description</label>
+                <input id="eventDescription" type="text" placeholder="Enter event description">
                 <label>Event day</label>
                 <input type="date" id="eventDay">
                 <label>Event time</label>

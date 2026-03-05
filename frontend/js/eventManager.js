@@ -88,22 +88,13 @@ saveBtn.addEventListener("click", () => {
     <h2>Event Overview</h2>
 
     <p><strong>Event Name:</strong> ${name}</p>
-
-    <p><strong>Date & time:</strong> ${date} , ${time}</p>
-
-
     <p><strong>Participants:</strong> ${participants}</p>
-
+    <p><strong>Date & time:</strong> ${date} , ${time}</p>
     <p><strong>Number of days:</strong> ${days} days</p>
-
     <div class="event-actions">
-
         <button class="edit-btn">Edit event</button>
-
         <button class="delete-btn">Delete event</button>
-
     </div>
-
 `
     container.appendChild(eventBox)
     form.style.display = "none"

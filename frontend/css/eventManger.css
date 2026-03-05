@@ -8,15 +8,22 @@
 
 }
 
+.dashboard{
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+}
+
 .create-btn{
-    grid-column:1/-1;
     background:#5389DA4F;
     border:none;
-    padding:14px 26px;
-    border-radius:12px;
-    font-size:15px;
+    padding:12px 22px;
+    border-radius:10px;
+    font-size:14px;
     cursor:pointer;
     transition:0.25s;
+    width:fit-content;
+    margin-top: 20px;
 }
 
 .create-btn:hover{
@@ -151,9 +158,11 @@
     margin-bottom:6px;
 }
 
-@media (max-width:768px){
+@media (max-width:700px){
     .event-container{
         grid-template-columns:1fr;
-        padding:30px 20px;
+        padding:20px;
+        width:100%;
     }
+
 }
