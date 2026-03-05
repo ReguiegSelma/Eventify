@@ -105,7 +105,7 @@ header .logo h1{
     right: -8px;
     top: 50%;
     height: 70%;
-    background: rgba(0, 0, 255, 0.364);
+    background: rgba(0, 0, 255, 0.365);
     transform: translateY(-50%) rotate(-3deg);
     z-index: 1;
 }
@@ -515,7 +515,6 @@ input:focus, select:focus {
 }
 
 
-/* ─── Footer ───────────────────────────────────────── */
 
 footer {
     color: rgb(42, 42, 42);

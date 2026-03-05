@@ -1,0 +1,104 @@
+*, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      padding: 40px 16px;
+    }
+
+    .card {
+      background-color: #f0ece4;
+      border: 1.5px solid #3373bd;
+      border-radius: 22px;
+      padding: 52px 56px 48px;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .card-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-align: center;
+      margin-bottom: 46px;
+      letter-spacing: -0.3px;
+    }
+
+    .card-title .highlight {
+      background-color: #a3a3ff;
+      color: #0303a45d;
+      padding: 2px 10px;
+      border-radius: 6px;
+    }
+
+    .field {
+      margin-bottom: 24px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+
+    .field input {
+      width: 100%;
+      padding: 18px 20px;
+      background-color: #ffffff;
+      border: 1.5px solid #3373bd;
+      border-radius: 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: #1a1a1a;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .field input:focus {
+      border-color: #7b9cc4;
+    }
+
+    .btn-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    .btn-submit {
+      padding: 17px 72px;
+      background-color: #ffffff;
+      border: 1.5px solid #3373bd;
+      border-radius: 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #3373bd;
+      cursor: pointer;
+    }
+
+    .btn-submit:hover {
+      background-color: #3373bd;
+      color: #ffffff;
+      border-color: #3373bd;
+      box-shadow: 0 8px 20px rgba(51, 115, 189, 0.3);
+
+    }
+
+    .btn-submit:active {
+      transform: scale(0.98);
+      box-shadow: 0 4px 10px rgba(51, 115, 189, 0.2);
+
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 36px 22px 32px; }
+    }
