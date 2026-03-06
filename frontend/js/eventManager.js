@@ -105,7 +105,6 @@ saveBtn.addEventListener("click", () => {
         eventBox.remove()
 
     })
-
     const editBtn = eventBox.querySelector(".edit-btn")
     editBtn.addEventListener("click", () => {
         document.getElementById("eventName").value = name

@@ -39,6 +39,42 @@ function renderRegistrations(data){
 
 
 
+function buildRoleDetails(user){
+    if(user.role === "staff"){
+        return `
+            <p>Preferred role</p>
+            <p>${user.preferredRole || "-"}</p>
+            <p>Organized before</p>
+            <p>${user.organizedBefore || "-"}</p>
+            <p>Availability</p>
+            <p>${user.availability || "-"}</p>
+        `
+    }
+
+    if(user.role === "mentor"){
+        return `
+            <p>Years of experience</p>
+            <p>${user.yearsExperience || "-"}</p>
+            <p>Expertise area</p>
+            <p>${user.expertiseArea || "-"}</p>
+            <p>Mentored before</p>
+            <p>${user.mentoredBefore || "-"}</p>
+            <p>Availability</p>
+            <p>${user.availability || "-"}</p>
+        `
+    }
+
+    // participant
+    return `
+        <p>Team name</p>
+        <p>${user.teamName || "-"}</p>
+        <p>Main skills</p>
+        <p>${user.mainSkills || "-"}</p>
+        <p>Skill level</p>
+        <p>${user.skillLevel || "-"}</p>
+    `
+}
+
 function showDetails(user){
     detailsBox.style.display = "block"
     detailsBox.innerHTML = `
@@ -50,14 +86,15 @@ function showDetails(user){
             <p>${user.lastName}</p>
             <p>Email</p>
             <p>${user.email}</p>
-            <p>Discord</p>
+            <p>Discord username</p>
             <p>${user.discordUsername}</p>
             <p>University</p>
             <p>${user.university || "-"}</p>
-            <p>Field</p>
+            <p>Field of study</p>
             <p>${user.fieldOfStudy}</p>
             <p>Role</p>
             <p>${user.role}</p>
+            ${buildRoleDetails(user)}
         </div>
         <div class="details-actions">
             <button class="approve-btn">Approve</button>

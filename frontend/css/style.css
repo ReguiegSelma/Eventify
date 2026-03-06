@@ -114,7 +114,7 @@ header .logo h1{
     font-size: 20px;
     font-weight: 600;
     color: #000000;
-    font-family: poppins;
+    font-family: "Poppins";
     margin-bottom: 70px;
 }
 
@@ -489,6 +489,36 @@ input:focus, select:focus {
     background-color: #3373bd;
 }
 
+.shift-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.shift-row select {
+    flex: 1;
+    padding: 14px 18px;
+    border: 1.5px solid #cfe3ff;
+    border-radius: 14px;
+    font-size: 16px;
+    background: #f7f9fc;
+    cursor: pointer;
+}
+
+.add-shift-btn {
+    background: none;
+    border: none;
+    color: #3373bd;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 0;
+    margin-top: 4px;
+}
+
+.add-shift-btn:hover {
+    text-decoration: underline;
+}
 
 #final {
     display: none;

@@ -26,15 +26,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="../images/OMC.png">
+    <link rel="icon" type="image/png" href="./images/OMC.png">
     <title>EVENTIFY</title>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="../images/OMC.png" alt="omc logo">
+            <img src="./images/OMC.png" alt="omc logo">
             <h1>Eventify</h1>
         </div>
         <ul class="links">
@@ -50,7 +50,7 @@
             with <span class="eventify"> Eventify</span></h1>
         </div>
         <div class="parg">
-            <img src="../images/Sahm.png" alt="sahm" class="sahm">
+            <img src="./images/Sahm.png" alt="sahm" class="sahm">
             <p>By Open Minds Club</p>
         </div>
         <div class="time">
@@ -204,7 +204,6 @@
             <form class="register-form" id="form2" style="display: none; margin-top: 40px;">
                 <div class="form-group">
                     <label>Do you already have a team? *:</label>
-                    <input type="checkbox" id="haveteam" name="haveteam">
                       <label class="radio-option">
                             <input type="radio" name="team" value="yes" required>
                             <span>Yes</span>
@@ -281,8 +280,26 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Availability during the event :</label>
-                    <input type="text" id="availabilityMentor" name="availability" required maxlength="120" autocomplete="off">
+                <label>Availability during the event :</label>
+                <div id="shiftsMentor">
+                    <div class="shift-row">
+                        <select class="shift-day">
+                            <option value="">Day</option>
+                            <option value="day1">Day 1</option>
+                            <option value="day2">Day 2</option>
+                            <option value="day3">Day 3</option>
+                        </select>
+                        <select class="shift-time">
+                            <option value="">Shift</option>
+                            <option value="morning">Morning</option>
+                            <option value="afternoon">Afternoon</option>
+                            <option value="evening">Evening</option>
+                            <option value="full">Full day</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" class="add-shift-btn" onclick="addShift('shiftsMentor')">+ add shift</button>
+                <input type="hidden" id="availabilityMentor" name="availability">
                 </div>
                 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
                     <button type="button" class="btn-register" id="back3">← Back</button>
@@ -306,7 +323,25 @@
                 </div>
                 <div class="form-group">
                     <label>Availability during the event :</label>
-                    <input type="text" id="availabilityStaff" name="availability" required maxlength="120" autocomplete="off">
+                    <div id="shiftsStaff">
+                        <div class="shift-row">
+                            <select class="shift-day">
+                                <option value="">Day</option>
+                                <option value="day1">Day 1</option>
+                                <option value="day2">Day 2</option>
+                                <option value="day3">Day 3</option>
+                            </select>
+                            <select class="shift-time">
+                                <option value="">Shift</option>
+                                <option value="morning">Morning</option>
+                                <option value="afternoon">Afternoon</option>
+                                <option value="evening">Evening</option>
+                                <option value="full">Full day</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="add-shift-btn" onclick="addShift('shiftsStaff')">+ add shift</button>
+                    <input type="hidden" id="availabilityStaff" name="availability">
                 </div>
                 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
                     <button type="button" class="btn-register" id="back4">← Back</button>
@@ -331,7 +366,7 @@
         <div class="footer-container">
 
         <div class="footer-left">
-            <img src="../images/OMC.png" alt="logo">
+            <img src="./images/OMC.png" alt="logo">
             <span>Eventify</span>
         </div>
 
@@ -346,5 +381,5 @@
         </div>
         </div>
     </footer>
-    <script src="../js/script.js"></script></body>
+    <script src="./js/script.js"></script></body>
 </html>

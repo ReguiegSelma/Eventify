@@ -28,7 +28,7 @@
             <li><a class="active">Event management</a></li>
             <li><a href="registrations.html">Registrations</a></li>
             <li><a href="users.html">Users list</a></li>
-            <li><a href="logout.html">Logout</a></li>
+            <li><a href="login.html">Logout</a></li>
         </ul>
     </header>
     <main class="dashboard">
@@ -81,6 +81,23 @@
                 <input type="number"id="staff">
                 <label>Max number of mentor</label>
                 <input type="number"id="mentor">
+
+                <h4>Staff shift</h4>
+                <div id="staffShiftContainer" class="shift-container">
+                    <!-- rows added by JS -->
+                </div>
+                <button type="button" class="add-shift-admin" data-target="staffShiftContainer">
+                    + add staff shift
+                </button>
+
+                <h4>Mentor shift</h4>
+                <div id="mentorShiftContainer" class="shift-container">
+                    <!-- rows added by JS -->
+                </div>
+                <button type="button" class="add-shift-admin" data-target="mentorShiftContainer">
+                    + add mentor shift
+                </button>
+
                 <h4>Agenda</h4>
                 <label>Number of days</label>
                 <input type="number" id="daysNumber" placeholder="Enter number of days">

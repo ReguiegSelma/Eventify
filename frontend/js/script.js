@@ -57,6 +57,31 @@ function safeGetQueryParam(name, allowedValues = []) {
     return cleaned;
 }
 
+
+
+function addShift(containerId) {
+    const container = document.getElementById(containerId);
+    const row = document.createElement("div");
+    row.className = "shift-row";
+    row.innerHTML = `
+        <select class="shift-day">
+            <option value="">Day</option>
+            <option value="day1">Day 1</option>
+            <option value="day2">Day 2</option>
+            <option value="day3">Day 3</option>
+        </select>
+        <select class="shift-time">
+            <option value="">Shift</option>
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+            <option value="full">Full day</option>
+        </select>
+        <button type="button" onclick="this.parentElement.remove()" 
+            style="background:none;border:none;color:#e74c3c;font-size:18px;cursor:pointer;">×</button>
+    `;
+    container.appendChild(row);
+}
 //Form
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -239,7 +264,7 @@ document.getElementById("submitFinal").addEventListener("click", function () {
     };
 
 
-    /* ===== Role specific data ===== */
+    /* Role specific data */
 
     if (currentRole === "participant") {
 
@@ -257,16 +282,29 @@ document.getElementById("submitFinal").addEventListener("click", function () {
         payload.expertiseArea = sanitizeString(document.getElementById("expertiseArea").value, { maxLen: 120 });
         payload.masteredTools = sanitizeString(document.getElementById("masteredTools").value, { maxLen: 200 });
         payload.mentoredBefore = sanitizeString(document.querySelector('input[name="mentored"]:checked')?.value || "", { maxLen: 10 });
-        payload.availability = sanitizeString(document.getElementById("availabilityMentor").value, { maxLen: 120 });
-
+        payload.availability = [...document.querySelectorAll("#shiftsMentor .shift-row")]
+        .map(row => {
+            const day = row.querySelector(".shift-day").value;
+            const shift = row.querySelector(".shift-time").value;
+            return day && shift ? `${day} - ${shift}` : null;
+        })
+        .filter(Boolean)
+        .join(", ");
     }
     else if (currentRole === "staff") {
 
         payload.preferredRole = sanitizeString(document.getElementById("preferredRole").value, { maxLen: 120 });
         payload.organizedBefore = sanitizeString(document.getElementById("organizedBefore").value, { maxLen: 10 });
-        payload.availability = sanitizeString(document.getElementById("availabilityStaff").value, { maxLen: 120 });
-
+        payload.availability = [...document.querySelectorAll("#shiftsStaff .shift-row")]
+            .map(row => {
+                const day = row.querySelector(".shift-day").value;
+                const shift = row.querySelector(".shift-time").value;
+                return day && shift ? `${day} - ${shift}` : null;
+            })
+            .filter(Boolean)
+            .join(", ");
     }
+
     let registrations = JSON.parse(localStorage.getItem("registrations")) || [];
     registrations.push(payload);
     localStorage.setItem("registrations", JSON.stringify(registrations));
